@@ -256,7 +256,7 @@ body {
   gap: 30px;
 }
 
-.w-100 { width: 100%; }
+.w-100 { width: 110%; }
 
 
 
@@ -537,6 +537,7 @@ body {
 
 .cta { background-position: 75%; }
 
+
 .cta-banner { display: none; }
 
 .cta-content { padding-block: 80px var(--section-padding); }
@@ -704,11 +705,34 @@ body {
 
 
 
+/*-----------------------------------*\
+  MIS ESTILOS 
+\*-----------------------------------*/
+
+.description {
+  text-align: justify;
+  color: var(--spanish-gray);  
+}
+
+.line {   
+  border-bottom: 1px solid #ccc;
+  margin: 30px auto;
+  width: 50%;
+}
+
+.cta .container {
+  position: relative!important;
+}
+
+.cta-banner {
+  position: relative;
+  right: 50px!important;
+}
 
 
 /*-----------------------------------*\
   #MEDIA QUERIES
-\*-----------------------------------*/
+/*-----------------------------------*\
 
 /**
  * responsive for large than 575px screen
@@ -1029,7 +1053,7 @@ body {
    * SERVICE
    */
 
-  .service .grid-list { grid-template-columns: repeat(4, 1fr); }
+  .service .grid-list { grid-template-columns: repeat(3, 1fr); }
 
   .service-card .h3 { --fs-3: 2.4rem; }
 
