@@ -32,6 +32,7 @@
   --light-gray: hsl(0, 0%, 80%);
   --platinum: hsl(0, 0%, 91%);
   --amber: hsl(45, 100%, 51%);
+  --bright-yellow: hsl(62, 100%, 51%);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --onyx: hsl(220, 2%, 24%);
@@ -195,6 +196,8 @@ body {
 .h3 { font-size: var(--fs-3); }
 
 .btn {
+  transition: transform 0.3s ease-in-out;
+  animation: zoomInOut 2s infinite;
   background-color: var(--black);
   color: var(--white);
   max-width: max-content;
@@ -389,7 +392,7 @@ body {
 .hero {
   /* margin-block-start: 85px; */
   min-height: 360px;
-  background-position: left;
+  background-position: center;
   text-align: start;
 }
 
@@ -398,6 +401,7 @@ body {
 .hero-text {
   color: var(--white);
   margin-block: 15px 25px;
+  font-size: var(--fs-5);
 }
 
 .hero .btn { margin-inline: auto; }
@@ -405,8 +409,12 @@ body {
 .hero .btn:is(:hover, :focus) { background-color: var(--portland-orange); }
 
 
-
-
+/*-----------------------------------*\
+  #MIS ESTILOS PARA HERO
+\*-----------------------------------*/
+.section.hero .container {
+  padding: 30px 18px;
+}
 
 /*-----------------------------------*\
   #CATEGORY
@@ -457,7 +465,20 @@ body {
 .offer-card .btn:is(:hover, :focus) { background-color: var(--black); }
 
 
+/*-----------------------------------*\
+  #MIS ESTILOS PARA OFFERS
+\*-----------------------------------*/
+.offer-card .card-title {
+  margin-block: 5px 10px;
+}
 
+.offer ul .btn {
+  background-color: var(--portland-orange);
+  margin-top: 30px;
+  max-width: 100%;
+  text-align: center;
+  padding: 15px;
+}
 
 
 /*-----------------------------------*\
@@ -531,7 +552,14 @@ body {
 
 .service-card .card-title { margin-block: 10px; }
 
-.service-card .card-text { color: var(--spanish-gray); }
+/* .service-card .card-text { color: var(--sonic-silver); } */
+.service-card .card-text { 
+  color: var(--sonic-silver); 
+}
+
+.service-card .card-text strong {
+  color: var(--portland-orange);
+}
 
 
 
@@ -560,8 +588,35 @@ body {
   color: var(--black);
 }
 
+/*-----------------------------------*\
+  #MIS ESTILOS PARA CTA
+\*-----------------------------------*/
+.cta .container {
+  padding-inline: 25px;
+}
+.taste-guarantee {
+  display: flex;
+  align-items: center;
+  margin-block: 25px;
+}
+.taste-guarantee img {
+  margin-right: 10px;
+}
+.taste-guarantee p {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 20px;
+}
+.taste-guarantee p strong {
+  font-size: 3rem;
+}
 
-
+.cta .btn {
+  max-width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: var(--portland-orange);
+}
 
 
 /*-----------------------------------*\
@@ -580,18 +635,141 @@ body {
   max-width: max-content;
   margin-inline: auto;
 }
+/*-----------------------------------*\
+  #MIS ESTILOS PARA BRAND
+\*-----------------------------------*/
+.brand {
+  background-color: var(--portland-orange);
+}
 
+.brand .span {
+  color: var(--white);
+}
+.brand .recetario {
+  display: grid;
+  justify-items: center;
+  padding: 0 20px;
+  gap: 15px;
+}
+.brand .recetario p {
+  color: var(--white);
+  text-align: center;
+  font-size: 1.8rem;
+}
 
+.brand .recetario img {
+  width: 80%;
+}
 
+.recetario strong {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--bright-yellow);
+  font-size: 2.2rem;
+  font-weight: 900;
+}
 
+.timer {
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  font-size: 3.5em;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.timer .time-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.timer span {
+  display: inline-block;
+  min-width: 2ch;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timer span:not(:last-child)::after {
+  margin: 0 5px;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.timer span:last-child::after {
+  content: "";
+}
+
+.timer .label {
+  font-weight: 300;
+  font-size: 0.30em;
+  color: var(--black);
+}
+
+.prices {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.price {
+  font-size: 1.9em;
+  font-weight: 900;
+}
+
+.price.before span {
+  color: rgb(255, 0, 0);
+}
+
+.price.before s {
+  color: black;
+}
+
+.price.now span {
+  color: green;
+}
+
+.price.now {
+  color: white;
+  font-size: 2.2em;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.brand .container a {
+  /* transition: transform 0.3s ease-in-out;
+  animation: zoomInOut 2s infinite; */
+  margin: 15px;
+  max-width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: var(--bright-yellow);
+  color: var(--black);
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 
 .footer {
-  background-color: var(--raisin-black);
-  color: var(--battleship-gray);
+  /* background-color: var(--raisin-black); */
+  color: var(--sonic-silver);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
@@ -681,6 +859,33 @@ body {
 }
 
 
+/*-----------------------------------*\
+  #MIS ESTILOS PARA FOOTER
+\*-----------------------------------*/
+.paws {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  width: 100%; /* Utiliza todo el ancho disponible */
+}
+
+.paw-left {
+  transform: scale(0.4) rotate(-10deg);
+  margin: -20px -70px 0 0; /* Añade un margen negativo a la derecha */
+}
+
+.paw-right {
+  transform: scale(0.4) rotate(40deg);
+  margin-left: -90px; /* Añade un margen negativo a la izquierda */
+  fill: var(--portland-orange);
+}
+.footer .container p {
+  text-align: center; /* Centrar el párrafo */
+  margin: -35px 0 45px; /* Añadir un margen negativo arriba y abajo */
+  font-size: 1.3em;
+  color: var(--sonic-silver);
+}
+
 
 
 /*-----------------------------------*\
@@ -717,7 +922,7 @@ body {
 
 .description {
   text-align: justify;
-  color: var(--spanish-gray);  
+  color: var(--sonic-silver);  
   padding: 30px;
   font-size: 1.8rem;
 }
@@ -872,7 +1077,7 @@ body {
 
   .description {
     text-align: justify;
-    color: var(--spanish-gray);  
+    color: var(--sonic-silver);  
     padding: 50px;
   }
 
@@ -967,7 +1172,7 @@ body {
 
   .description {
     text-align: justify;
-    color: var(--spanish-gray);  
+    color: var(--sonic-silver);  
     padding: 50px;
   }
 
@@ -1109,7 +1314,7 @@ body {
 
   .description {
     text-align: justify;
-    color: var(--spanish-gray);  
+    color: var(--sonic-silver);  
     padding: 50px;
   }
 }
