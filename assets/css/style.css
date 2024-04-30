@@ -37,6 +37,10 @@
   --onyx: hsl(220, 2%, 24%);
 
   /**
+   * Mis colores 
+   */
+  --gray: hsl(0deg 0% 92.28%);
+  /**
    * typography
    */
 
@@ -136,7 +140,8 @@ html {
 }
 
 body {
-  background-color: var(--white);
+  /* background-color: var(--white); /*Color de fondo */
+  background-color: var(--gray); /* Color de fondo */
   color: var(--black);
   font-size: 1.6rem;
   line-height: 1.5;
@@ -269,11 +274,11 @@ body {
 .action-btn.user { display: none; }
 
 .header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--gray);
   padding-block: 20px;
   z-index: 4;
 }
@@ -281,6 +286,7 @@ body {
 .header.active {
   position: fixed;
   box-shadow: var(--shadow-1);
+  background-color: var(--gray);
 }
 
 .header .container {
@@ -381,10 +387,10 @@ body {
 \*-----------------------------------*/
 
 .hero {
-  margin-block-start: 85px;
+  /* margin-block-start: 85px; */
   min-height: 360px;
   background-position: left;
-  text-align: center;
+  text-align: start;
 }
 
 .hero-title .span { font-size: 0.5em; }
@@ -712,6 +718,8 @@ body {
 .description {
   text-align: justify;
   color: var(--spanish-gray);  
+  padding: 30px;
+  font-size: 1.8rem;
 }
 
 .line {   
@@ -858,6 +866,17 @@ body {
 
   .footer-top .container { grid-template-columns: 1fr 1fr; }
 
+  /*-----------------------------------*\
+  MIS ESTILOS 
+  \*-----------------------------------*/
+
+  .description {
+    text-align: justify;
+    color: var(--spanish-gray);  
+    padding: 50px;
+  }
+
+
 }
 
 
@@ -942,6 +961,16 @@ body {
     align-items: center;
   }
 
+  /*-----------------------------------*\
+    MIS ESTILOS 
+  \*-----------------------------------*/
+
+  .description {
+    text-align: justify;
+    color: var(--spanish-gray);  
+    padding: 50px;
+  }
+
 }
 
 
@@ -1001,7 +1030,7 @@ body {
 
   .header.active {
     --color: var(--black);
-    background-color: var(--white);
+    background-color: var(--gray);
   }
 
   .header .logo,
@@ -1073,6 +1102,16 @@ body {
 
   .footer-top .container { grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr; }
 
+
+  /*-----------------------------------*\
+  MIS ESTILOS 
+  \*-----------------------------------*/
+
+  .description {
+    text-align: justify;
+    color: var(--spanish-gray);  
+    padding: 50px;
+  }
 }
 
 
